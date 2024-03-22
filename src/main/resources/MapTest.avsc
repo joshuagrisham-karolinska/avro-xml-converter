@@ -1,0 +1,19 @@
+{
+  "type": "record",
+  "name": "MapTest",
+  "namespace": "se.karolinska.schemas.test",
+  "fields": [
+    {
+      "name": "anInt",
+      "type": "int"
+    },
+    {
+      "name": "aMap",
+      "type": {
+        "type": "map",
+        "values": "long",
+        "default": {}
+      }
+    }
+  ]
+}

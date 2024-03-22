@@ -1,0 +1,30 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "AvroXmlConverterCommand (schema to stdout)",
+            "request": "launch",
+            "mainClass": "se.karolinska.kardapp.integrations.AvroXmlConverterCommand",
+            "projectName": "avro-xml-converter",
+            "args": "--schema src/main/resources/AdministrationRCCnoarray.avsc --pretty-print --avro-encoder-syntax"
+        },
+        {
+            "type": "java",
+            "name": "AvroXmlConverterCommand (data to stdout)",
+            "request": "launch",
+            "mainClass": "se.karolinska.kardapp.integrations.AvroXmlConverterCommand",
+            "projectName": "avro-xml-converter",
+            "args": "--schema src/main/resources/AdministrationRCCnoarray.avsc --data src/main/resources/AdministrationRCCnoarray.avro --avro-encoder-syntax"
+        }
+    ]
+}

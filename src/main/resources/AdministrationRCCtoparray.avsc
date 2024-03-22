@@ -1,0 +1,91 @@
+{
+  "type": "record",
+  "name": "AdministrationRCC",
+  "namespace": "se.karolinska.schemas.karda.cytodos",
+  "fields": [
+            {
+              "name": "array",
+              "type": [
+                "null",
+                {
+                  "type": "array",
+                  "items": [
+                    "null",
+                    {
+                      "type": "record",
+                      "name": "ConnectDefault2",
+                      "fields": [
+                        {
+                          "name": "ContentID",
+                          "type": [
+                            "null",
+                            "int"
+                          ],
+                          "default": null
+                        },
+                        {
+                          "name": "AdministrationStatus",
+                          "type": [
+                            "null",
+                            "int"
+                          ],
+                          "default": null
+                        },
+                        {
+                          "name": "AdministrationStatus_LongDescription",
+                          "type": [
+                            "null",
+                            "string"
+                          ],
+                          "default": null
+                        },
+                        {
+                          "name": "Dose",
+                          "type": [
+                            "null",
+                            "double"
+                          ],
+                          "default": null
+                        },
+                        {
+                          "name": "DoseringsEnhet",
+                          "type": [
+                            "null",
+                            "string"
+                          ],
+                          "default": null
+                        },
+                        {
+                          "name": "SubstanceType",
+                          "type": [
+                            "null",
+                            "int"
+                          ],
+                          "default": null
+                        },
+                        {
+                          "name": "Innholdstoff_Navn",
+                          "type": [
+                            "null",
+                            "string"
+                          ],
+                          "default": null
+                        },
+                        {
+                          "name": "Innholdstoff_ATC",
+                          "type": [
+                            "null",
+                            "string"
+                          ],
+                          "default": null
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "default": null
+            }
+  ],
+  "connect.name": "se.karolinska.schemas.karda.cytodos.AdministrationRCC"
+}

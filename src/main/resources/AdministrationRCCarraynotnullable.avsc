@@ -1,0 +1,272 @@
+{
+  "type": "record",
+  "name": "AdministrationRCC",
+  "namespace": "se.karolinska.schemas.karda.cytodos",
+  "fields": [
+    {
+      "name": "LatestCytodosAdminKey",
+      "type": "int"
+    },
+    {
+      "name": "Personnummer",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    },
+    {
+      "name": "RekvisisjonId",
+      "type": "int"
+    },
+    {
+      "name": "EncounterId",
+      "type": [
+        "null",
+        "int"
+      ],
+      "default": null
+    },
+    {
+      "name": "EncounterDate",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    },
+    {
+      "name": "EncounterStatus",
+      "type": [
+        "null",
+        "int"
+      ],
+      "default": null
+    },
+    {
+      "name": "EncounterStatus_LongDescription",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    },
+    {
+      "name": "SignatureUser_FullName",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    },
+    {
+      "name": "SignatureUser_UserName",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    },
+    {
+      "name": "PDL_enhet_Namn",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    },
+    {
+      "name": "PDL_enhet_HSAID",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    },
+    {
+      "name": "Sparrgrupp",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    },
+    {
+      "name": "Inskrivningstidpunkt",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    },
+    {
+      "name": "Utskrivningstidpunkt",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    },
+    {
+      "name": "Diagnoskod_ICD10",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    },
+    {
+      "name": "Diagnosnamn_ICD10",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    },
+    {
+      "name": "Vardenhet_id",
+      "type": [
+        "null",
+        {
+          "type": "int",
+          "connect.type": "int16"
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "Vardenhet_namn",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    },
+    {
+      "name": "Vardenhet_HSAID",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    },
+    {
+      "name": "Slutenvard",
+      "type": {
+        "type": "int",
+        "connect.type": "int8"
+      }
+    },
+    {
+      "name": "SenastUppdaterad",
+      "type": {
+        "type": "long",
+        "connect.version": 1,
+        "connect.name": "org.apache.kafka.connect.data.Timestamp",
+        "logicalType": "timestamp-millis"
+      }
+    },
+    {
+      "name": "SenastUppdaterad_orig",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    },
+    {
+      "name": "MedicationDetailList",
+      "type": [
+        "null",
+        {
+          "type": "record",
+          "name": "ConnectDefault",
+          "namespace": "io.confluent.connect.avro",
+          "fields": [
+            {
+              "name": "array",
+              "type": 
+                {
+                  "type": "array",
+                  "items": 
+                    {
+                      "type": "record",
+                      "name": "ConnectDefault2",
+                      "fields": [
+                        {
+                          "name": "ContentID",
+                          "type": [
+                            "null",
+                            "int"
+                          ],
+                          "default": null
+                        },
+                        {
+                          "name": "AdministrationStatus",
+                          "type": [
+                            "null",
+                            "int"
+                          ],
+                          "default": null
+                        },
+                        {
+                          "name": "AdministrationStatus_LongDescription",
+                          "type": [
+                            "null",
+                            "string"
+                          ],
+                          "default": null
+                        },
+                        {
+                          "name": "Dose",
+                          "type": [
+                            "null",
+                            "double"
+                          ],
+                          "default": null
+                        },
+                        {
+                          "name": "DoseringsEnhet",
+                          "type": [
+                            "null",
+                            "string"
+                          ],
+                          "default": null
+                        },
+                        {
+                          "name": "SubstanceType",
+                          "type": [
+                            "null",
+                            "int"
+                          ],
+                          "default": null
+                        },
+                        {
+                          "name": "Innholdstoff_Navn",
+                          "type": [
+                            "null",
+                            "string"
+                          ],
+                          "default": null
+                        },
+                        {
+                          "name": "Innholdstoff_ATC",
+                          "type": [
+                            "null",
+                            "string"
+                          ],
+                          "default": null
+                        }
+                      ]
+                    }
+                  
+                }
+            }
+          ]
+        }
+      ],
+      "default": null
+    }
+  ],
+  "connect.name": "se.karolinska.schemas.karda.cytodos.AdministrationRCC"
+}
